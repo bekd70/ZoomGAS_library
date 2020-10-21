@@ -1,0 +1,32 @@
+/**
+* this is used to send a request to the zoom API to get settings for an individual user.
+* @param {String}    zoomUserId    Zoom ID of the User
+* @return {object} data{"responseCode": int, "body": {"schedule_meeting": object}}
+**/
+function getUserSettings(zoomUserId) {
+  var url = 'https://api.zoom.us/v2//users/' + zoomUserId + '/settings';
+  var token = getZoomAccessToken();
+  var payload = "";
+  var options =
+      {
+        'method'  : 'GET',   
+        'followRedirects' : true,
+        'muteHttpExceptions': true,
+        "headers": {
+          "Accept": "application/json, application/xml",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token
+        },
+        'payload': payload
+      };
+  var response = UrlFetchApp.fetch(url, options);
+  var json = response.getContentText();
+  var rc = response.getResponseCode();
+  var body = JSON.parse(json);
+  var data ={
+      "responseCode": rc,
+      "body": body
+    };
+  return data;
+  
+}
