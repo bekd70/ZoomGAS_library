@@ -1,5 +1,5 @@
 /**
-* this is used to send a request to the zoom API to create a meeting.
+* this is used to send a request to the zoom API to get the zoom links for all meetings for a user.
 * @param {string}   meetingId    meeting ID for the Zoom meeting
 * @return {object} data{"responseCode:	int,body{id: string,string,host_id:	string,host_email: string,assistant_id:	string,topic:	string,type: int,status: string,
 start_time:	string,duration:	int,timezone:	string,agenda:	string,created_at:	string,start_url:	string,join_url:	string,h323_password:	string,pstn_password:	string,encrypted_password	:string}
