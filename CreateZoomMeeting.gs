@@ -26,7 +26,8 @@ function createMeeting(topic,startTime,duration,presenterEmail,password) {
   '"participant_video": true'  + ',' +
   '"registration_type": 2'  + ',' +
   '"approval_type": 0'  + ',' +
-  '"join_before_host": true'  + ',' +
+  '"join_before_host": false'  + ',' +
+  '"use_pmi": false' + ',' +
   '"waiting_room": false'  + '}}';
   var options =
       {
