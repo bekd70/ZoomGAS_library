@@ -1,5 +1,6 @@
 /**
 * this is used to send a request to the zoom API to update a meeting.
+* @param {int}       meetingId Zoom meeting ID
 * @param {String}    topic    Meeting Name
 * @param {String}    startTime   Start time of meeting in YYYY-MM-DDTHH:MM:SS format
 * @param {int}       duration    Meeting duration in minutes
